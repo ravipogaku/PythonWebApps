@@ -38,6 +38,7 @@ st.subheader('User Input parameters')
 st.write(df.to_dict())
 
 df['Quotient_Number'] = df['First_Number']/df['Second_Number']
+df['Quotient_Number'] = df['Quotient_Number'].replace({1:1,0:0})
 
 st.write("Result",df['Quotient_Number'])
 
