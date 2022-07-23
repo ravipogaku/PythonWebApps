@@ -16,3 +16,21 @@ This app predicts the credit card approval probablity
 #Get Input
 
 st.header('User Input Parameters')
+
+def user_input_features():
+    firstNumber = st.number_input("First_Number",min_value=1,max_value=400000 ,step=1)
+    secondNumber = st.number_input("Second_Number",min_value=1,max_value=400000 ,step=1)
+    
+    data = {
+            'First_Number': firstNumber,
+            'Second_Number': secondNumber
+            
+            }
+    features = pd.DataFrame(data, index=[0])
+    return features
+
+df = user_input_features()
+
+st.subheader('User Input parameters')
+st.write(df.to_dict())
+    
