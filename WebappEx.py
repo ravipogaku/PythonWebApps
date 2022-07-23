@@ -34,8 +34,7 @@ def user_input_features():
 
 df = user_input_features()
 
-st.subheader('User Input parameters')
-st.write(df.to_dict())
+
 
 df['Quotient'] = df['First_Number']/df['Second_Number']
 df['Quotient'] = df['Quotient'].replace(df['Quotient'])
