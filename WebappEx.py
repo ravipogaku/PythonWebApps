@@ -40,6 +40,7 @@ df['Quotient'] = df['First_Number']/df['Second_Number']
 df['Quotient'] = df['Quotient'].replace(df['Quotient'])
 
 st.write("Result",df['Quotient'])
+st.write("Result",df['First_Number']/df['Second_Number'])
 
 
     
